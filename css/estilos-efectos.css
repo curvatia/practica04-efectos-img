@@ -1,0 +1,586 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*===================================
+   NEW ESTILOS GLOBALES 
+===================================== */
+* {-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', Sans-serif;
+	margin: 0 auto;
+	padding: 0;
+	/*max-width: 1600px;*/
+}
+img {
+	vertical-align: middle;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btnDown {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translate(-50%);
+}
+.btnDown:hover {
+  opacity: 0.8;
+}
+
+.btnUp {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+}
+.btnUp:hover {
+  opacity: 0.8;
+}	
+
+/*===========================
+       CURTAIN MENU W3S
+============================= */
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 0%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/*===========================
+      CUTOUT TEXT W3S
+============================= */
+.image-container {
+  background-image: url("../img/img_nature_wide.jpg"); /* The image used - important! */
+  opacity: 0.65;
+  background-size: cover;
+  position: relative; /* Needed to position the cutout text in the middle of the image */
+  height: 300px; /* Some height */
+}
+
+.text {
+  background-color: #008CBA;
+  color: black;
+  font-size: 10vw; /* Responsive font size */
+  font-weight: bold;
+  margin: 0 auto; /* Center the text container */
+  padding: 10px;
+ /* width: 50%;*/ /*PARA NO CORTAR EL TEXTO Y SE AJUSTE A LA PANTALLA*/
+  text-align: center; /* Center text */
+  position: absolute; /* Position text */
+  top: 50%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%); /* Position text in the middle */
+  mix-blend-mode: screen /*difference*/;  /* This makes the cutout text possible */ 
+ /*CAPAS DEL TEXTO IMPORTANTE*/
+}
+
+.image-container span {
+	color: white;
+	position: absolute;/*sticky*/
+	top: 10px;
+	left: 10px;
+}
+
+
+/*=========================================
+   PORTOFOLIO GALLERY 4COLUMNAS NATURE W3S
+=========================================== */
+.row4 {
+  margin: 8px 0px /*-16px*/;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row4,
+.row4 > .column4 {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column4 {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row4:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content4 {
+  background-color: white;
+  padding: 10px;
+  text-align: center;/*ADD*/
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column4 {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column4 {
+    width: 100%;
+  }
+}
+
+/*=======================================
+   PARALLAX SCROLLING CARS - PARALAJE W3S
+========================================= */
+.parallax {
+  /* The image used */
+  background-image: url("../img/cars.jpg");
+  opacity: 0.65;
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;	
+  position: relative;/*DIV PADRE ARRIBA CUTOUT .text {position: absolute;} */
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+/*=======================================
+   PORTOFOLIO GALLERY 3COLUMNAS CARS W3S
+========================================= */
+.row3 {
+  margin: 8px 0px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row3,
+.row3 > .column3 {
+  padding: 5px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column3 {
+  float: left;
+  width: 33.33%;/*4 DIV 25%*/
+}
+
+/* Clear floats after rows */
+.row3:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content3 {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column3 {
+    width: 100%;
+  }
+}
+
+
+/*=======================================
+ PARALLAX SCROLLING PEOPLE - PARALAJE W3S
+========================================= */
+.parallax2 {
+  /* The image used */
+  background-image: url("../img/people.jpg");
+  opacity: 0.65;
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;	
+  position: relative;/*DIV PADRE ARRIBA CUTOUT .text {position: absolute;} */
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax2 {
+    background-attachment: scroll;
+  }
+}
+
+
+/*========================
+     SCREEN VIDEO W3S
+========================== */
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: relative/*fixed*/;
+  right: 0;
+  bottom: 0;
+  width: 100%;/*IMPORTANTE*/
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.contentvideo {
+  position: absolute/*fixed*/;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 80%;
+  padding: 20px;
+  margin-bottom: 5px; /*ADD*/
+  /*top: 50%;*//*ADD*/
+  left: 50%;/*ADD*/
+  transform: translate(-50%, 0%);/*ADD -50 izq/dcha*/
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+/*@media (max-width: 576px) {
+.contentvideo {
+	width: 90%; 
+	font-size: 0.5em;}
+	#myBtn {
+	width: 100px;
+	font-size: 0.5em;}
+}*/
+@media screen and (max-width: 768px) {
+.contentvideo {
+	width: 80%;
+	font-size: 0.5em;}
+	#myBtn {
+	width: 100px;
+	font-size: 0.5em;}
+}
+/*@media (max-width: 992px) {
+.contentvideo {
+	width: 70%; 
+	font-size: 1.5em;}
+	#myBtn {
+	width: 100px;
+	font-size: 1.5em;}
+}
+@media (max-width: 1200px) {
+.contentvideo {
+	width: 60%; 
+	font-size: 1.5em;}
+    #myBtn {
+	width: 100px;
+	font-size: 1.5em;}
+}
+@media (max-width: 1400px) {
+.contentvideo {
+	width: 50%;
+	font-size: 1.5em;}
+    #myBtn {
+	width: 100px;
+	font-size: 1.5em;}
+}*/
+
+
+/*========================================
+   PORTFOLIO FILTERING W3S - PICTURES
+========================================== */
+.allfilter {
+	text-align: center;
+	margin: 1em;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: white;
+}
+
+
+/*====================
+     ZOOM HOVER
+====================== */
+.zoom {
+  -ms-transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -o-transition: transform 1s; 
+   transition: transform 1s; /* Animation .2s->0.2 segundos */
+  /*padding: 50px;*/
+  /*background-color: green;*/
+  /*width: 200px;*/
+  /*height: 200px;*/
+  /*margin: 0 auto;*/
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  -moz-transform: scale(1.05); /* Mozilla Firefox */
+  -o-transform: scale(1.05); /* Opera */
+  transform: scale(1.05); /* (105% zoom - Note: if the zoom is too large, it will go outside of the viewport) | transform: scale(1.5); -> 150% zoom */
+}
+
+@media (max-width: 768px) {
+.zoom:hover{
+	transition: transform 1s;
+	transform: scale(1.5);
+	}
+}
+/*====================
+     FLIP BOX
+====================== */
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  position: relative;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  width: 100%;/*ADD*/
+  height: 100%;/*ADD*/
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: #008CBA;
+  color: white;
+  transform: rotateY(180deg);
+  position: absolute;/*ADD*/
+  top: 0;/*ADD*/
+  text-align: center;/*ADD*/
+  font-size: 2em;/*ADD*/
+}
+
+
+@media (max-width: 599px) {
+.flip-box-back{
+	font-size: 1.5em;}
+}
+
+/*@media (max-width: 640px) {
+.flip-box-back{
+	font-size: 0.5em;}
+}
+*/
+@media screen and (max-width: 900px) {
+.flip-box-back{
+	font-size: 0.2em;}
+  }
+
+/*====================
+     BOTON VOLVER
+====================== */	
+.buttonCenter {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-bottom: 20px;/*ADD*/
+}
+
+.button2 {	
+  border-radius: 15px;
+  background-color: darkcyan;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
+  width: 150px;
+  cursor: pointer;
+  margin: 5px;
+  box-shadow: 0 5px #999;
+}
+
+.button2:hover {background-color: #008CBA}
+
+.button2:active {
+  background-color: #008CBA;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+	
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*====================
+     BOTON SUBIR
+====================== */
+
+	
+	
+	
+	

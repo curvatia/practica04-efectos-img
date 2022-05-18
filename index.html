@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<title>Efectos de imagen con CSS</title>
+
+<!-- Información sobre el documento web -->
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="Confección y publicación de páginas web">
+<meta name="author" content="Jennifer">
+<meta name="generator" content="DreamWeaver">
+
+<!-- Etiquetas de adaptación del contenido -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- FAVICON (icono de favoritos)-->
+<link rel="icon" href="img/favicon.ico" type="image/ico">
+
+<!-- Enlace externo a un documento de estilos CSS -->
+<link rel="stylesheet" href="css/estilos-efectos.css" type="text/css">
+
+<!-- Enlace externo a un documento de funciones JavaScript --> 
+<script src="js/funciones-efectos.js"></script> 
+
+<!-- Enlace externo a un tipo de letra de Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- Enlace externo a Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="css/styles-W3S.css" type="text/css">
+<!--<link rel="stylesheet" href="css/LineIcons.css" type="text/css">-->
+<!--<link rel="stylesheet" href="css/estilos-bootstrap.css" type="text/css">-->
+	
+	
+</head>
+
+<body>
+	
+<!--  CURTAIN MENU--> 
+<!--  ---------------------------------------- --> 
+<!-- The overlay -->
+<div id="myNav" class="overlay"> 
+  
+  <!-- Button to close the overlay navigation --> 
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
+  
+  <!-- Overlay content -->
+  <div class="overlay-content"> 
+	  <a href="#nature" onClick="closeNav()">Nature</a> 
+	  <a href="#cars" onClick="closeNav()">Cars</a> 
+	  <a href="#people" onClick="closeNav()">People</a> 
+	  <a href="#video" onClick="closeNav()">Video</a> 
+	  <a href="#pictures" onClick="closeNav()">Pictures</a> </div>
+</div>
+
+<!-- METEMOS OPENNAV DENTRO DLE DIV IMG CONTAINER --> 
+<!--<span style="font-size:30px;cursor:pointer;position:sticky;left:10px;z-index:1;color:darkcyan" onclick="openNav()">&#9776;open</span> --> 
+
+<!--  CUTOUT TEXT--> 
+<!--  ---------------------------------------- -->
+<div class="image-container" id="nature"> 
+  <!-- Use any element to open/show the overlay navigation menu --> 
+  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;open</span>
+  <div class="text">NATURE</div>
+</div>
+
+<!--  PORTOFOLIO GALLERY 4--> 
+<!--  ---------------------------------------- --> 
+
+<!-- Portfolio Gallery Grid -->
+<div class="row4" style="position: relative" id="home">
+  <div class="column4">
+    <div class="content4"> <img src="img/img_mountains.jpg" alt="Mountains" style="width:100%">
+      <h3>Mountains</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column4">
+    <div class="content4"> <img src="img/img_forest.jpg" alt="Forest" style="width:100%">
+      <h3>Forest</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column4">
+    <div class="content4"> <img src="img/img_lights.jpg" alt="Auroras" style="width:100%">
+      <h3>Auroras Borealis</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column4">
+    <div class="content4"> <img src="img/img_snow.jpg" alt="Snow" style="width:100%">
+      <h3>Snow</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+	
+	<div class="btnDown">
+	<a href="#cars">
+	<i class="fa fa-chevron-circle-down" style="font-size: 3em;color:black"></i>
+	</a>
+	</div>
+	
+</div>
+
+<!--<div class="content">
+  <img src="img/people3.jpg" alt="People" style="width:100%">
+  <h3>Some Other Work</h3>
+  <p>Lorem ipsum..</p>
+</div>
+--> 
+
+<!--  PARALLAX SCROLLING--> 
+<!--  ---------------------------------------- --> 
+<!-- Container element -->
+<div class="parallax" id="cars">
+  <div class="text">CARS</div>
+</div>
+
+<!--  PORTOFOLIO GALLERY 3--> 
+<!--  ---------------------------------------- --> 
+<!-- Portfolio Gallery Grid -->
+<div class="row3" style="position: relative">
+	
+  <div class="column3">
+    <div class="content3">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"> <img src="img/cars1.jpg" alt="Retro" style="width:100%"> </div>
+			<div class="flip-box-back">
+			  <h3>Retro</h3>
+			  <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+			</div>
+		</div>
+      </div>
+    </div>
+  </div>
+	
+  <div class="column3">
+    <div class="content3">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"> <img src="img/cars2.jpg" alt="Fast" style="width:100%"> </div>
+          <div class="flip-box-back">
+            <h3>Fast</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+  <div class="column3">
+    <div class="content3">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="img/cars3.jpg" alt="Classic" style="width:100%"> </div>
+          <div class="flip-box-back">
+            <h3>Classic</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+	<div class="btnDown">
+	<a href="#people">
+	<i class="fa fa-chevron-circle-down" style="font-size: 3em;color:white"></i>
+	</a>
+	</div>
+	
+	
+</div>
+
+<!--  PARALLAX SCROLLING--> 
+<!--  ---------------------------------------- --> 
+<!-- Container element -->
+<div class="parallax2" id="people">
+  <div class="text">PEOPLE</div>
+</div>
+
+<!--  PORTOFOLIO GALLERY 3--> 
+<!--  ---------------------------------------- --> 
+<!-- Portfolio Gallery Grid -->
+
+<div class="row3" style="position: relative">
+	
+  <div class="column3">
+    <div class="content3">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"> <img src="img/people1.jpg" alt="Girl" style="width:100%"> </div>
+          <div class="flip-box-back">
+            <h3>Girl</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+  <div class="column3">
+    <div class="content3">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"> <img src="img/people2.jpg" alt="Boy" style="width:100%"> </div>
+          <div class="flip-box-back">
+            <h3>Boy</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+  <div class="column3">
+    <div class="content3">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"> <img src="img/people3.jpg" alt="Woman" style="width:100%"> </div>
+          <div class="flip-box-back">
+            <h3>Woman</h3>
+            <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+	<div class="btnDown">
+	<a href="#video">
+	<i class="fa fa-chevron-circle-down" style="font-size: 3em;color:black"></i>
+	</a>
+	</div>
+	
+</div>
+
+<!--  FULLSCREEN VIDEO--> 
+<!--  ---------------------------------------- --> 
+<!-- The video -->
+<div style="position: relative" id="video">
+  <video autoplay muted loop id="myVideo">
+    <source src="img/rain.mp4" type="video/mp4">
+  </video>
+  
+  <!-- Optional: some overlay text to describe the video -->
+  <div class="contentvideo">
+    <h1>Vídeo lluvia</h1>
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+    <!-- Use a button to pause/play the video with JavaScript -->
+    <button id="myBtn" onclick="myFunction()">Pause</button>
+  </div>
+	
+	<div class="btnDown">
+	<a href="#pictures">
+	<i class="fa fa-chevron-circle-down" style="font-size: 3em;color:white"></i>
+	</a>
+	</div>
+	
+</div>
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script> 
+
+<!--  PORTFOLIO FILTERING - PICTURES --> 
+<!--  ---------------------------------------- -->
+<div class="allfilter" id="pictures" style="position: relative">
+<h2>PICTURES</h2>
+<div>
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+  <button class="btn" onclick="filterSelection('people')"> People</button>
+  <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column cars">
+    <div class="content">
+      <div><img src="img/cars1.jpg" alt="Car" style="width:100%" class="zoom"></div>
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content"> <img src="img/cars2.jpg" alt="Car" style="width:100%" class="zoom">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content"> <img src="img/cars3.jpg" alt="Car" style="width:100%" class="zoom">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content"> <img src="img/people1.jpg" alt="People" style="width:100%" class="zoom">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content"> <img src="img/people2.jpg" alt="People" style="width:100%" class="zoom">
+      <h4>Boy</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content"> <img src="img/people3.jpg" alt="People" style="width:100%" class="zoom">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content"> <img src="img/mountains.jpg" alt="Mountains" style="width:100%" class="zoom">
+      <h4>Mountains</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content"> <img src="img/lights.jpg" alt="Lights" style="width:100%" class="zoom">
+      <h4>Lights</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content"> <img src="img/img_forest.jpg" alt="Forest" style="width:100%" class="zoom">
+      <h4>Forest</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <!-- END GRID --> 
+ </div>
+	
+    <div class="btnUp">
+	<a href="#nature">
+	<i class="fa fa-chevron-circle-up" style="font-size: 3em;color:black"></i>
+	</a>
+	</div>	
+	
+	
+</div>
+	
+<script>
+	window.onload = filterSelection('nature')
+</script> 
+
+<!--  BOTON VOLVER --> 
+<!--  ---------------------------------------- -->
+<div class="buttonCenter"> <a href="https://www.20659alumno12.com/portfolio" class="button2"><span>Back</span></a> </div>
+	
+	
+</body>
+</html>
